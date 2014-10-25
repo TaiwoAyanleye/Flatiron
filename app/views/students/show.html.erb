@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Flatiron School - Students</title>
+  <link href="/style.css" type="text/css" rel="stylesheet">
+  <link href="/matz.css" type="text/css" rel="stylesheet">
+  <script id="twitter-wjs" src="http://platform.twitter.com/widgets.js"></script>
+  <script type="text/javascript" src="/js/libs/jquery-1.4.3.min.js"></script>
+  <script type="text/javascript" src="/js/libs/modernizr-1.7.min.js"></script>
+</head>
+
+<body>
+<div id="page">
+  <header id="header">
+    <div class="center">
+      <nav id="main-menu">
+        <ul>
+          <li class="site-title"><a href="index.html">Students @ Flatiron School</a></li>
+        </ul>
+        <ul>
+          <li><a href="http://flatironschool.com">More about Our School</a></li>
+        </ul>
+      </nav>
+      <div class="clear"></div>
+    </div>
+  </header>
+
+  <section id="about" class="about-us content">
+
+
+      <div class="jrcolumns">
+          <!-- LEFT COLUMN -->
+          <div id='navcontainer'class="one_third">
+
+
+
+
+<div class=<%= @student.image_class %>>
+  <img src="/images/circle-mask.png"/>
+</div>
+
+
+<nav id='side-nav'>
+              <ul>
+                <li class='mail'><a href="mailto:<%= @student.email %>">Mail</a></li>
+                <li class='blog'><a href=<%= @student.blog %>>Blog</a></li>
+                <li class='linkedin'><a href=<%= @student.linked_in %>>LinkedIn</a></li>
+                <li class='twitter'><a href=<%= @student.twitter %>>Twitter</a></li>
+              </ul>
+            </nav> <!-- this is the end of side nav -->
+          </div>
+          <!-- MIDDLE COLUMN -->
+          <div class="two_third">
+            <h1><%= "#{@student.first_name}" + "#{@student.first_name}" %></h1>
+            <h1><%# @student.first_name@student.last_name %></h1>
+            <h2 id="tabline"><%= @student.tag_line %></h2>
+            <p><%= @student.bio %></p>
+
+<br/><br/>
+            <h2 id='tagline'>My favorite apps</h2>
+
+<div class="one_third">
+<h4><%= @student.app_1 %></h4>
+<p><%= @student.app_1_desc %></p>
+</div>
+
+
+<div class="one_third">
+<h4><%= @student.app_2 %></h4>
+<p><%= @student.app_2_desc %></p>
+</div>
+
+<div class="one_third last">
+<h4><%= @student.app_3 %></h4>
+<p><%= @student.app_3_desc %></p>
+</div>
+
+
+          </div>
+<!-- RIGHT COLUMN -->
+
+        <div class="clear"></div>
+
+        <h2 class="title"><span>Coder Cred</span></h2>
+
+
+
+          <div class="columns">
+          <div class="coder-cred">
+
+            <div class="one_fifth"><a href=<%= @student.github %>><div class="cred-github"></div></a></div>
+            <div class="one_fifth"><a href=<%= @student.code_school %>><div class="cred-codeschool"></div></a></div>
+            <div class="one_fifth"><a href=<%= @student.coder_wall %>><div class="cred-coderwall"></div></a></div>
+            <div class="one_fifth"><a href=<%= @student.stack_overflow %>><div class="cred-stackoverflow"></div></a></div>
+            <div class="one_fifth last"><a href=<%= @student.treehouse %>><div class="cred-treehouse"></div></a></div>
+
+
+          </div>
+          </div>
+
+
+        <div class="clear"></div>
+        <h2 class="title"><span>Social Nerdery</span></h2>
+
+
+        <div class="one_half">
+
+          <%= @student.githubfeed %>
+          <!-- .html_safe -->
+
+        </div>
+        <div class="one_half last">
+
+
+            <%= @student.twitterfeed %>
+            <!-- .html_safe -->
+
+
+        </div>
+      <div class="clear"></div>
+        <h2 class="title">&nbsp;</h2>
+<section id="copyright" class="footer content">
+    <div class="center">
+      <p>&copy; 2012. All Your Rights Are Belong To Us.</p>
+      <div class="clear"></div>
+    </div>
+  </section>
+
+
+        </div>
+    </div>
+  </section>
+</body>
+</html>
+
